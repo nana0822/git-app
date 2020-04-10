@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: git-add_development
+  database: git-app_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: git-add_test
+  database: git-app_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: git-add_production
-  username: git-add
-  password: <%= ENV['GIT-ADD_DATABASE_PASSWORD'] %>
+  database: git-app_production
+  username: git-app
+  password: <%= ENV['GIT-APP_DATABASE_PASSWORD'] %>
